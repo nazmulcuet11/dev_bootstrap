@@ -1,0 +1,37 @@
+---
+- name: Install Homebrew Packages
+  hosts: localhost
+  vars:
+    cask_packages_to_install:
+      - google-chrome
+      - visual-studio-code
+      - slack
+      - bitwarden
+      - notion
+      - proxyman
+      - rectangle
+      - vlc
+      - zoom
+      - postman
+      - sourcetree
+    packages_to_install:
+      # - mas
+      - pyenv
+      # - rust
+      # - go
+      # - node
+      # - kotlin
+      # - java
+      # - gradle
+
+  tasks:
+    - name: Install Homebrew Cask Packages
+      include_tasks: cask_package_task.yml
+      loop: "{{ cask_packages_to_install }}"
+      loop_control:
+        loop_var: package_name
+
+    # - name: Install Homebrew Packages
+      # homebrew:
+        # name: "{{ packages_to_install }}"
+        # state: present

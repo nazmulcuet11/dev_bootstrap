@@ -1,0 +1,6 @@
+---
+- name: Install {{ package_name }}
+  homebrew_cask:
+    name: "{{ package_name }}"
+    state: present
+  ignore_errors: yes
