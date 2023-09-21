@@ -11,18 +11,19 @@
       - proxyman
       - rectangle
       - vlc
-      - zoom
+      # - zoom # has some issue, need to figure out later
       - postman
       - sourcetree
     packages_to_install:
-      # - mas
+      - mas
       - pyenv
-      # - rust
-      # - go
-      # - node
-      # - kotlin
-      # - java
-      # - gradle
+      - rust
+      - go
+      - node
+      - kotlin
+      - java
+      - gradle
+      - git-lfs
 
   tasks:
     - name: Install Homebrew Cask Packages
@@ -31,7 +32,8 @@
       loop_control:
         loop_var: package_name
 
-    # - name: Install Homebrew Packages
-      # homebrew:
-        # name: "{{ packages_to_install }}"
-        # state: present
+    - name: Install Homebrew Packages
+      include_tasks: brew_package_task.yml
+      loop: "{{ packages_to_install }}"
+      loop_control:
+        loop_var: package_name
