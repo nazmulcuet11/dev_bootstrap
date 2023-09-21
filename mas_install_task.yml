@@ -1,0 +1,4 @@
+---
+- name: Install {{ app.name }}
+  ansible.builtin.command: mas install {{ app.id }}
+  ignore_errors: yes

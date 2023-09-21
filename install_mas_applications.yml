@@ -1,0 +1,16 @@
+---
+- name: Install Apps from Mac App Store
+  hosts: localhost
+  vars:
+    apps_to_install:
+      - name: HashMaker
+        id: 509733654
+      - name: BitWarden
+        id: 1352778147
+
+  tasks:
+    - name: Install Mac Appstore Apps
+      include_tasks: mas_install_task.yml
+      loop: "{{ apps_to_install }}"
+      loop_control:
+        loop_var: app

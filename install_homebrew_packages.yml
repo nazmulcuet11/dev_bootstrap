@@ -6,7 +6,7 @@
       - google-chrome
       - visual-studio-code
       - slack
-      - bitwarden
+      # - bitwarden # install with mas because brew cask version does not support browser integration
       - notion
       - proxyman
       - rectangle
