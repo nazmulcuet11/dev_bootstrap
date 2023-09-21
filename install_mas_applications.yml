@@ -7,6 +7,8 @@
         id: 509733654
       - name: BitWarden
         id: 1352778147
+      - name: Okta Verify
+        id: 490179405
 
   tasks:
     - name: Install Mac Appstore Apps

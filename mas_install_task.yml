@@ -1,4 +1,11 @@
 ---
+- name: Check if {{ app.name }} is installed
+  ansible.builtin.shell: mas list | grep -q {{ app.id }}
+  register: app_installed
+  changed_when: app_installed.rc != 0
+  ignore_errors: yes
+
 - name: Install {{ app.name }}
   ansible.builtin.command: mas install {{ app.id }}
+  when: app_installed.rc != 0
   ignore_errors: yes

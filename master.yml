@@ -1,0 +1,5 @@
+---
+- name: Homebrew packages
+  import_playbook: install_homebrew_packages.yml
+- name: Apps from App Store
+  import_playbook: install_mas_applications.yml
