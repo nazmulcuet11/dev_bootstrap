@@ -1,0 +1,13 @@
+---
+- name: Install global npm packages
+  hosts: localhost
+  vars:
+    packages_to_install:
+      - psproxy
+
+  tasks:
+    - name: Install global npm packages
+      include_tasks: npm_pacakge_task.yml
+      loop: "{{ packages_to_install }}"
+      loop_control:
+        loop_var: package_name

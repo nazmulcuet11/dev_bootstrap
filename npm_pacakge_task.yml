@@ -1,0 +1,7 @@
+---
+- name: Install {{ package_name }}
+  npm:
+    name: "{{ package_name }}"
+    state: present
+    global: yes
+  ignore_errors: yes
