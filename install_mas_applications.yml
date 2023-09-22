@@ -9,6 +9,8 @@
         id: 1352778147
       - name: Okta Verify
         id: 490179405
+      - name: ImageDiff 2
+        id: 1602522152
 
   tasks:
     - name: Install Mac Appstore Apps
