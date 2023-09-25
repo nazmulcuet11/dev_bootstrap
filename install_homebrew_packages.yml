@@ -14,6 +14,8 @@
       # - zoom # has some issue, need to figure out later
       - postman
       - sourcetree
+      # - copyq
+      # - microsoft-teams
     packages_to_install:
       - mas
       - pyenv
@@ -23,7 +25,7 @@
       - kotlin
       - java
       - gradle
-      - git-lfs
+      # - git-lfs
 
   tasks:
     - name: Install Homebrew Cask Packages
