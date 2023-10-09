@@ -27,6 +27,7 @@
       - java
       - gradle
       # - git-lfs
+      - git-flow
 
   tasks:
     - name: Install Homebrew Cask Packages
