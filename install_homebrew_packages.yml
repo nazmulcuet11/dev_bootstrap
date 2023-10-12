@@ -17,6 +17,7 @@
       # - copyq
       # - microsoft-teams
       # - jetbrains-toolbox
+      # - flutter
     packages_to_install:
       - mas
       - pyenv
