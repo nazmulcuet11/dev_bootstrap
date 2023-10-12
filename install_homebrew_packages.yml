@@ -18,6 +18,7 @@
       # - microsoft-teams
       # - jetbrains-toolbox
       # - flutter
+      # - android-studio
     packages_to_install:
       - mas
       - pyenv
@@ -29,6 +30,7 @@
       - gradle
       # - git-lfs
       - git-flow
+      - cocoapods
 
   tasks:
     - name: Install Homebrew Cask Packages
