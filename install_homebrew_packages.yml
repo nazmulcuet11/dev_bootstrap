@@ -19,6 +19,8 @@
       # - jetbrains-toolbox
       # - flutter
       # - android-studio
+      - docker
+      - dbeaver-community
     packages_to_install:
       - mas
       - pyenv
