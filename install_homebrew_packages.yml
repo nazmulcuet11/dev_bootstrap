@@ -14,13 +14,14 @@
       # - zoom # has some issue, need to figure out later
       - postman
       - sourcetree
-      # - copyq
+      - copyq
       # - microsoft-teams
-      # - jetbrains-toolbox
-      # - flutter
-      # - android-studio
+      - jetbrains-toolbox
+      - flutter
+      - android-studio
       - docker
       - dbeaver-community
+      - dotnet-sdk
     packages_to_install:
       - mas
       - pyenv
