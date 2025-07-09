@@ -3,3 +3,5 @@
   import_playbook: install_homebrew_packages.yml
 - name: Apps from App Store
   import_playbook: install_mas_applications.yml
+- name: Global npm packages
+  import_playbook: install_npm_packages.yml
