@@ -22,6 +22,12 @@
       - docker
       - dbeaver-community
       - dotnet-sdk
+      - android-platform-tools
+      - cursor
+      - firefox
+      - fork
+      - mongodb-compass
+      - orbstack
     packages_to_install:
       - mas
       - pyenv
@@ -31,10 +37,18 @@
       - kotlin
       - java
       - gradle
-      # - git-lfs
       - git-flow
       - cocoapods
       - yarn
+      - devops/tap/devstack
+      - git-lfs
+      - nvm
+      - openapi-generator
+      - openconnect
+      - pnpm
+      - swiftlint
+      - tmux
+      - tree
 
   tasks:
     - name: Install Homebrew Cask Packages

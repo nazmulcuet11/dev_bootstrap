@@ -3,14 +3,24 @@
   hosts: localhost
   vars:
     apps_to_install:
-      - name: HashMaker
-        id: 509733654
       - name: BitWarden
         id: 1352778147
-      - name: Okta Verify
-        id: 490179405
+      - name: HashMaker
+        id: 509733654
       - name: ImageDiff 2
         id: 1602522152
+      - name: Okta Verify
+        id: 490179405
+      - name: Brother iPrint&Scan
+        id: 1193539993
+      - name: iMovie
+        id: 408981434
+      - name: LINE
+        id: 539883307
+      - name: Microsoft OneNote
+        id: 784801555
+      - name: OneDrive
+        id: 823766827
 
   tasks:
     - name: Install Mac Appstore Apps
