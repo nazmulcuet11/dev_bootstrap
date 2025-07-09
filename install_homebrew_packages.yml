@@ -13,8 +13,7 @@
       - vlc
       # - zoom # has some issue, need to figure out later
       - postman
-      - sourcetree
-      - copyq
+      # - copyq # not recommended for new macOS versions
       # - microsoft-teams
       - jetbrains-toolbox
       - flutter
