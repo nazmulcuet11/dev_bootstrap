@@ -1,0 +1,13 @@
+---
+# This task file ensures the required Python packages for Dock modification are installed,
+# and then runs dock_setup.py to configure the macOS Dock with your preferred apps.
+
+- name: Ensure docklib and pyobjc are installed (for Dock automation)
+  pip:
+    name:
+      - docklib
+      - pyobjc
+    executable: pip3
+
+- name: Run dock_setup.py to configure the Dock
+  command: python3 dock_setup.py 
