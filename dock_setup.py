@@ -32,7 +32,7 @@ def main() -> None:
     dock = Dock()
 
     # Move dock to the left side
-    dock.orientation = "left"
+    dock.orientation = "left"  # type: ignore
 
     # Remove all current items
     dock.items["persistent-apps"] = []
@@ -47,6 +47,7 @@ def main() -> None:
 
     # Save the dock configuration
     dock.save()
+    print("Dock configuration saved successfully!")
 
 
 if __name__ == "__main__":
