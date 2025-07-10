@@ -5,10 +5,11 @@
   import_playbook: tasks/mas/install_mas_applications.yml
 - name: Global npm packages
   import_playbook: tasks/npm/install_npm_packages.yml
-# This playbook configures the macOS Dock with your preferred apps after all installations.
-- name: Configure Dock
-  hosts: localhost
-  tags: dock
-  tasks:
-    - name: Run Dock setup tasks (install docklib/pyobjc and configure Dock)
-      include_tasks: tasks/dock/dock_setup_task.yml
+# The Dock setup section is commented out due to a Python packaging dependency issue with Homebrew's Python.
+# Once resolved, you can uncomment this section to enable Dock automation again.
+# - name: Configure Dock
+#   hosts: localhost
+#   tags: dock
+#   tasks:
+#     - name: Run Dock setup tasks (install docklib/pyobjc and configure Dock)
+#       include_tasks: tasks/dock/dock_setup_task.yml
