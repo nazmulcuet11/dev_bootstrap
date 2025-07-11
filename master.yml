@@ -13,5 +13,5 @@
 #   tasks:
 #     - name: Run Dock setup tasks (install docklib/pyobjc and configure Dock)
 #       include_tasks: tasks/dock/dock_setup_task.yml
-- name: Dotfiles and config setup
-  import_playbook: tasks/dotfiles/setup_dotfiles_and_configs.yml
+# - name: Dotfiles and config setup
+#   import_playbook: tasks/dotfiles/setup_dotfiles_and_configs.yml

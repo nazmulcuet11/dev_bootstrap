@@ -20,10 +20,10 @@
       - android-studio
       - docker
       - dbeaver-community
-      - dotnet-sdk
+      # - dotnet-sdk
       - android-platform-tools
       - cursor
-      - firefox
+      # - firefox
       - fork
       - mongodb-compass
       - orbstack
@@ -33,14 +33,13 @@
       - rust
       - go
       - node
-      - kotlin
-      - java
-      - gradle
+      # - kotlin
+      # - java
+      # - gradle
       - git-flow
       - cocoapods
       - yarn
-      - devops/tap/devstack
-      - git-lfs
+      # - git-lfs
       - nvm
       - openapi-generator
       - openconnect
