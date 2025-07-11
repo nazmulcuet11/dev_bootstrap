@@ -1,52 +1,55 @@
 ---
-# Install oh-my-zsh
-- name: Install oh-my-zsh
-  shell: |
-    RUNZSH=no CHSH=no KEEP_ZSHRC=yes sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-  args:
-    creates: ~/.oh-my-zsh
+- name: Setup dotfiles and configurations
+  hosts: localhost
+  tasks:
+    # Install oh-my-zsh
+    - name: Install oh-my-zsh
+      shell: |
+        RUNZSH=no CHSH=no KEEP_ZSHRC=yes sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+      args:
+        creates: ~/.oh-my-zsh
 
-# Install powerlevel10k
-- name: Install powerlevel10k theme
-  git:
-    repo: https://github.com/romkatv/powerlevel10k.git
-    dest: ~/.oh-my-zsh/custom/themes/powerlevel10k
-    version: master
+    # Install powerlevel10k
+    - name: Install powerlevel10k theme
+      git:
+        repo: https://github.com/romkatv/powerlevel10k.git
+        dest: ~/.oh-my-zsh/custom/themes/powerlevel10k
+        version: master
 
-# Symlink .zshrc
-- name: Symlink .zshrc
-  file:
-    src: "{{ playbook_dir }}/../../dotfiles/.zshrc"
-    dest: ~/.zshrc
-    state: link
-    force: yes
+    # Symlink .zshrc
+    # - name: Symlink .zshrc
+    #   file:
+    #     src: "{{ playbook_dir }}/../../dotfiles/.zshrc"
+    #     dest: ~/.zshrc
+    #     state: link
+    #     force: yes
 
-# Symlink .p10k.zsh if present
-- name: Check if .p10k.zsh exists
-  stat:
-    path: "{{ playbook_dir }}/../../dotfiles/.p10k.zsh"
-  register: p10k_file
+    # Symlink .p10k.zsh if present
+    # - name: Check if .p10k.zsh exists
+    #   stat:
+    #     path: "{{ playbook_dir }}/../../dotfiles/.p10k.zsh"
+    #   register: p10k_file
 
-- name: Symlink .p10k.zsh if present
-  file:
-    src: "{{ playbook_dir }}/../../dotfiles/.p10k.zsh"
-    dest: ~/.p10k.zsh
-    state: link
-    force: yes
-  when: p10k_file.stat.exists
+    # - name: Symlink .p10k.zsh if present
+    #   file:
+    #     src: "{{ playbook_dir }}/../../dotfiles/.p10k.zsh"
+    #     dest: ~/.p10k.zsh
+    #     state: link
+    #     force: yes
+    #   when: p10k_file.stat.exists
 
-# Symlink .gitconfig
-- name: Symlink .gitconfig
-  file:
-    src: "{{ playbook_dir }}/../../dotfiles/.gitconfig"
-    dest: ~/.gitconfig
-    state: link
-    force: yes
+    # Symlink .gitconfig
+    # - name: Symlink .gitconfig
+    #   file:
+    #     src: "{{ playbook_dir }}/../../dotfiles/.gitconfig"
+    #     dest: ~/.gitconfig
+    #     state: link
+    #     force: yes
 
-# Symlink .gitignore_global
-- name: Symlink .gitignore_global
-  file:
-    src: "{{ playbook_dir }}/../../dotfiles/.gitignore_global"
-    dest: ~/.gitignore_global
-    state: link
-    force: yes
+    # Symlink .gitignore_global
+    # - name: Symlink .gitignore_global
+    #   file:
+    #     src: "{{ playbook_dir }}/../../dotfiles/.gitignore_global"
+    #     dest: ~/.gitignore_global
+    #     state: link
+    #     force: yes
